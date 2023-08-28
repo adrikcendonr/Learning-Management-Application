@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.Canvas.Views.StudentView"
+             Title="STUDENTS"
+             BackgroundColor="LightBlue">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DodgerBlue" />
+            <Setter Property="TextColor" Value="SeaShell" />
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HeightRequest" Value="200" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="38" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Text="Student HomePage"
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Assignments"
+            Grid.Row="1"
+            Grid.Column="0"
+            Clicked="AssignmentClicked" />
+
+        <Button
+            Text="Courses"
+            Grid.Row="1"
+            Grid.Column="1"
+            Clicked="CourseClicked" />
+
+        <Button
+            Text="GPA"
+            Grid.Row="2"
+            Grid.Column="0"
+            Clicked="GPAClicked" />
+
+        <Button
+            Text="Cancel"
+            Grid.Row="2"
+            Grid.Column="1"
+            Clicked="CancelClicked" />
+    </Grid>
+</ContentPage>

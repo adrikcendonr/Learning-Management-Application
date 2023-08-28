@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.Canvas.Views.CourseView"
+             Title="CourseDetailView"
+             BackgroundColor="DarkGray">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DodgerBlue" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+<Grid Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label 
+                Text="Prefix"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" 
+                Grid.Row="0"
+                Grid.Column="0"
+                TextColor="#333333"
+                FontSize="Title"
+                Margin="0,0,0,10"
+                />
+            <Entry 
+                Text="{Binding Path=Prefix, Mode=TwoWay}"
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="#FFFFFF"
+                TextColor="#333333"
+                FontSize="Body"
+                Margin="0,0,0,10"
+                ></Entry>
+            <Label 
+                Text="Name"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" 
+                Grid.Row="0"
+                Grid.Column="1"
+                TextColor="#333333"
+                FontSize="Title"
+                Margin="0,0,0,10"
+                />
+            <Entry 
+                Text="{Binding Path=Name, Mode=TwoWay}"
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="#FFFFFF"
+                TextColor="#333333"
+                FontSize="Body"
+                Margin="0,0,0,10"
+                ></Entry>
+            
+        </Grid>
+
+        <Label 
+            Text="Description"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center"
+            FontSize="Title"/>
+        <Entry Text="{Binding Path=Description, Mode=TwoWay}" />
+
+
+            <Button
+                Text="Cancel"
+                Clicked="CancelClicked"
+                BackgroundColor="Red"
+                TextColor="#FFFFFF"
+                FontSize="Title"
+                WidthRequest="150"
+                HeightRequest="60"
+                />
+            <Button
+                Text="Ok"
+                Clicked="OkClicked"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Title"
+                CornerRadius="10"
+                Margin="20,0,0,0"
+                WidthRequest="150"
+                HeightRequest="60"
+                />
+    </VerticalStackLayout>
+</ContentPage>

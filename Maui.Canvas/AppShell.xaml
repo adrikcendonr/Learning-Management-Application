@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Maui.Canvas.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Maui.Canvas"
+    xmlns:extra="clr-namespace:Maui.Canvas.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Instructor"
+        ContentTemplate="{DataTemplate extra:TeacherView}"
+        Route="Instructor" />
+    <ShellContent
+        Title="Student"
+        ContentTemplate="{DataTemplate extra:StudentView}"
+        Route="Student" />
+    <ShellContent
+        Title="Enrollment Detail"
+        ContentTemplate="{DataTemplate extra:PersonView}"
+        Route="PersonDetail" />
+    <ShellContent
+        Title="Course Detail"
+        ContentTemplate="{DataTemplate extra:CourseView}"
+        Route="CourseDetail" />
+
+</Shell>

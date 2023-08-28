@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.Canvas.Views.TeacherView"
+             Title="InstructorView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             BackgroundColor="DarkGray"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Enrollments"
+            Clicked="Toolbar_EnrollmentsClicked"
+            />
+        <ToolbarItem
+            Text="Courses"
+            Clicked="Toolbar_CoursesClicked"
+           />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <SearchBar
+            Text="{Binding Query, Mode=TwoWay}"
+        ></SearchBar>
+        <StackLayout IsVisible="{Binding IsEnrollmentsVisible}"
+                     BackgroundColor="DarkGray"
+                     Padding="20"
+                     >
+            <Label 
+                Text="University Enrollments"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="Large"
+                Margin="0,0,0,10"
+                />
+            <ListView
+                ItemsSource="{Binding People}"
+                SelectedItem="{Binding SelectedPerson}">
+            </ListView>
+            <Button 
+                Text="Add Enrollment"
+                Clicked="AddEnrollmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+            <Button
+                Text="Edit Enrollment"
+                Clicked="EditEnrollmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+            <Button
+                Text="Remove Enrollment"
+                Clicked="RemoveEnrollmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+
+            <Button
+                Text="Cancel"
+                Clicked="CancelClicked"
+                BackgroundColor="Red"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+        </StackLayout>
+        
+        <StackLayout IsVisible="{Binding IsCoursesVisible}"
+                     BackgroundColor="DarkGray"
+                     Padding="20"
+                     >
+            <Label 
+                Text="University Course List"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="Large"
+                Margin="0,0,0,10"
+                />
+            <ListView
+                ItemsSource="{Binding Courses}"
+                SelectedItem="{Binding SelectedCourse}">
+            </ListView>
+            <Button 
+                Text="Add Course"
+                Clicked="AddCourseClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+            <Button
+                Text="Edit Course"
+                Clicked="EditCourseClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+            />
+            <Button
+             Text="Remove Course"
+             Clicked="RemoveCourseClick"
+             BackgroundColor="#0078D7"
+             TextColor="#FFFFFF"
+             FontSize="Large"
+             CornerRadius="10"
+             Margin="0,10,0,0"
+             />
+             <Button 
+                Text="Add Assignment"
+                Clicked="AddAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+             <Button 
+                Text="Remove Assignment"
+                Clicked="RemoveAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+                         <Button 
+                Text="Edit Assignment"
+                Clicked="RemoveAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+                         <Button 
+                Text="Add Module"
+                Clicked="AddAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+             <Button 
+                Text="Remove Module"
+                Clicked="RemoveAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+                         <Button 
+                Text="Edit Module"
+                Clicked="RemoveAssignmentClick"
+                BackgroundColor="#0078D7"
+                TextColor="#FFFFFF"
+                FontSize="Large"
+                CornerRadius="10"
+                Margin="0,10,0,0"
+                />
+             <Button
+            Text="Cancel"
+            BackgroundColor="Red"
+            TextColor="#FFFFFF"
+            FontSize="Large"
+            CornerRadius="10"
+            Margin="0,10,0,0"
+            />
+    </StackLayout>
+</StackLayout>
+</ContentPage>
